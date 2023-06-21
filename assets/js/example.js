@@ -9,11 +9,11 @@ fetch(source)
   //.then((y) => (document.getElementById("demo").innerHTML = y));
 */
 
-const requestCity = async (city) =>{
-  const source='http://api.openweathermap.org/data/2.5/weather';
-  const querry=`?q=${city}&appid=${API_KEY}`;
+const requestCity = async (City) =>{
+  const source=`http://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}`;
+  
   //fetch call
-  const response = await fetch(source + querry);
+  const response = await fetch(source);
 
   const data = await response.json();
   return data;
